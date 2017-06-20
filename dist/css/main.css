@@ -337,6 +337,7 @@ h1 {
   vertical-align: top;
   width: 27.2%;
   margin-right: 8.8%;
+  padding-top: 3px;
 }
 
 .experience-list:last-child {
@@ -508,7 +509,6 @@ h1 {
 }
 
 .progress-list {
-  margin-bottom: 15px;
   background: #fff;
   font-size: 0;
   line-height: 0;
@@ -543,7 +543,7 @@ h1 {
   position: absolute;
   top: 100%;
   left: 0;
-  height: 40px;
+  height: 25px;
   width: 1px;
   background: #fff;
   border-left: 1px dotted #b4b4b4;
@@ -839,10 +839,8 @@ h1 {
 
 .nav {
   height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  text-align: center;
 }
 
 .nav:after {
@@ -855,11 +853,16 @@ h1 {
   height: 1px;
 }
 
-.nav a {
+.nav li {
+  display: inline-block;
   padding: 0 36px;
+}
+
+.nav a {
   text-decoration: none;
-  font: 14px "RobotoLight", Arial, sans-serif;
+  font: 14px/80px "RobotoLight", Arial, sans-serif;
   color: #435993;
+  display: block;
 }
 
 .nav a:hover {
@@ -883,6 +886,9 @@ h1 {
   .nav:after {
     display: none;
   }
+  .nav li {
+    padding: 0;
+  }
   #menu {
     display: none;
   }
@@ -905,7 +911,7 @@ h1 {
 }
 
 .possession-js {
-  padding: 0 0 70px;
+  padding: 0 0 100px;
 }
 
 @media (max-width: 767px) {
@@ -1096,7 +1102,6 @@ h1 {
   list-style: none;
   overflow: hidden;
   padding: 0;
-  margin: 0 0 0 20px;
 }
 
 .slicknav_nav .slicknav_row {
@@ -1114,7 +1119,6 @@ h1 {
 
 .slicknav_nav a {
   padding: 5px 10px;
-  margin: 2px 5px;
   text-decoration: none;
   color: #fff;
 }
@@ -1185,7 +1189,6 @@ h1 {
   list-style: none;
   overflow: hidden;
   padding: 0;
-  margin: 0 0 0 20px;
 }
 
 .slicknav_nav .slicknav_row {
@@ -1203,7 +1206,6 @@ h1 {
 
 .slicknav_nav a {
   padding: 5px 10px;
-  margin: 2px 5px;
   text-decoration: none;
   color: #fff;
 }

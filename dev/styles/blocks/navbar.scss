@@ -4,10 +4,8 @@
 }
 .nav{
 	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	position: relative;
+	text-align: center;
 	&:after{
 		content:"";
 		position: absolute;
@@ -17,11 +15,15 @@
 		background: #d9d9d9;
 		height: 1px;
 	}
-	a{
+	li{
+		display:inline-block;
 		padding: 0 36px;
+	}
+	a{
 		text-decoration: none;
-		font: 14px $RobotoL;
+		font: 14px/80px $RobotoL;
 		color: #435993;
+		display: block;
 		&:hover{
 			color: #1c1c1c;
 		}
@@ -42,6 +44,9 @@
 		position: static;
 		&:after{
 			display: none;
+		}
+		li{
+			padding: 0;
 		}
 	}
 	#menu {
