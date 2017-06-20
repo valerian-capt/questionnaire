@@ -11,6 +11,11 @@
 			cursor: pointer;
 		}
 	}
+	@media(max-width:767px){
+		label{
+			font-size: 14px;
+		}
+	}
 }
 .checkbox {
 	position: relative;
@@ -68,5 +73,9 @@
 		&:after{
 			background: #435993;
 		}
+	}
+	@media(max-width:767px){
+		margin-right: 5px;
+		flex-shrink: 0;
 	}
 }

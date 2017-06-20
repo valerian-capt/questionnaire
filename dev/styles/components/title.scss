@@ -56,4 +56,10 @@
 		font: 16px/1.6 $RobotoL;
 		margin-bottom: 37px;
 	}
+	@media(max-width:767px){
+		font-size: 20px;
+		&_ico{
+			padding: 60px 0 20px;
+		}
+	}
 }

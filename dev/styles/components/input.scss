@@ -1,11 +1,46 @@
+.input-holder {
+	background: #fff;
+	
+	
+	/*padding: 15px 0;*/
+	max-width: 520px;
+	margin: 0 auto;
+	position: relative;
+	
+	label {
+		position: absolute;
+		font: 24px/1 $RobotoR; 
+		color: #c8c8c8;
+		width: 100%;
+		padding: 15px 0;
+		left: 0;
+		transition: all 0.17s linear 0s;
+		cursor: text;
+	}
+	.input-gray:focus, .input-active {
+		border-color: #435993;
+		padding: 22px 15px 8px;
+	}
+	.input-active {
+		border-color: #e5e5e5;
+		color: #1c1c1c;
+	}
+	.input-gray:focus + label,
+	.input-active + label {
+		font-size: 14px;
+		padding: 6px 0 0;
+	}
+}
 .input-gray{
 	background: #fff;
 	outline: none;
 	border: 1px solid #e8e8e8;
-	font: 24px/1 $RobotoR;
+	border-radius: 5px;
+	font: 22px/1 $RobotoR;
 	color: #c8c8c8;
 	border-radius: 5px;
 	padding: 15px;
+	transition: all 0.17s linear 0s;
 	&::-webkit-input-placeholder {
 		color: inherit;
 		opacity: 1;
@@ -17,5 +52,8 @@
 	&:-ms-input-placeholder {
 		color: inherit;
 		opacity: 1;
+	}
+	&:focus{
+		color: #1c1c1c;
 	}
 }

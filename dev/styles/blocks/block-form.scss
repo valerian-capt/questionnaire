@@ -3,4 +3,10 @@
 	&__title{
 		text-align: center;
 	}
+	@media(max-width:767px){
+		padding: 20px 0;
+		&__title{
+			font-size: 35px;
+		}
+	}
 }

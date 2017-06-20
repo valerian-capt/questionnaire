@@ -13,28 +13,31 @@
 		<div class="page-wrap">
 			<div class="navbar" id="menu">
 				<nav class="nav">
-					<a href="#" class="active">Личная информация</a>
-					<a href="#">Опыт</a>
-					<a href="#">JavaScript</a>
-					<a href="#">О себе</a>
+					<a href="#personal-information" class="active">Личная информация</a>
+					<a href="#experience">Опыт</a>
+					<a href="#javascript">JavaScript</a>
+					<a href="#about-me">О себе</a>
 				</nav>
 			</div>
 			<div class="block-form">
 				<h1 class="block-form__title">Анкета</h1>
 				<form action="#" class="questionnaire-form">
-					<div class="personal-info">
+					<div id="personal-information" class="personal-info">
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico info">Личная информация</h2>
 						</div>
 						<fieldset>
 							<div class="questionnaire-form-row">
-								<input class="input-gray" type="text" placeholder="ФИО">
+								<div class="input-holder">
+									<input id="full-name" class="input-gray" type="text" value="Черепанов" >
+									<label for="full-name">ФИО</label>
+								</div>
 							</div>
 							<div class="questionnaire-form-row">
 								<div class="select-gray">
 									<div id="customSelect">
 										<select name="speed" id="speed">
-											<option selected="selected">Год рождения</option>
+											<option>Год рождения</option>
 											<option>1990</option>
 											<option>1989</option>
 											<option>1988</option>
@@ -43,24 +46,33 @@
 											<option>1985</option>
 											<option>1984</option>
 											<option>1983</option>
-											<option>1982</option>
+											<option selected="selected">1982</option>
 											<option>1981</option>
 										</select>
 									</div>
 								</div>
 							</div>
 							<div class="questionnaire-form-row">
-								<input class="input-gray" type="text" placeholder="Место проживания">
+								<div class="input-holder">
+									<input id="residence" class="input-gray" type="text" value="Валерий">
+									<label for="residence">Место проживания</label>
+								</div>
 							</div>
 							<div class="questionnaire-form-row">
-								<input class="input-gray" type="text" placeholder="Skype">
+								<div class="input-holder">
+									<input id="skype" class="input-gray" type="text" value="valeriy_capt">
+									<label for="skype">Skype</label>
+								</div>
 							</div>
 							<div class="questionnaire-form-row">
-								<input class="input-gray" type="email" placeholder="E-mail">
+								<div class="input-holder">
+									<input id="e-mail" class="input-gray" type="email" value="cherepanov.valeriy@gmail.com">
+									<label for="e-mail">E-mail</label>
+								</div>
 							</div>
 						</fieldset>
 					</div>
-					<div class="experience-block">
+					<div id="experience" class="experience-block">
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico experience">Расскажите о своем опыте</h2>
 						</div>
@@ -68,7 +80,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area01">
+										<input type="checkbox" id="check-area01" checked>
 										<span></span>
 									</div>
 									<label for="check-area01">БЭМ/OOCSS</label>
@@ -77,7 +89,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area02">
+										<input type="checkbox" id="check-area02" checked>
 										<span></span>
 									</div>
 									<label for="check-area02">Верстаю семантично</label>
@@ -86,7 +98,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area03">
+										<input type="checkbox" id="check-area03" checked>
 										<span></span>
 									</div>
 									<label for="check-area03">Webpack</label>
@@ -95,7 +107,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area04">
+										<input type="checkbox" id="check-area04" checked>
 										<span></span>
 									</div>
 									<label for="check-area04">Stylus/LESS/SASS</label>
@@ -104,7 +116,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area05">
+										<input type="checkbox" id="check-area05" checked>
 										<span></span>
 									</div>
 									<label for="check-area05">ES2015/ES2016</label>
@@ -113,7 +125,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area06">
+										<input type="checkbox" id="check-area06" checked>
 										<span></span>
 									</div>
 									<label for="check-area06">jQuery</label>
@@ -122,7 +134,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area07">
+										<input type="checkbox" id="check-area07" checked>
 										<span></span>
 									</div>
 									<label for="check-area07">Работаю с SVG</label>
@@ -131,7 +143,7 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area08">
+										<input type="checkbox" id="check-area08" checked>
 										<span></span>
 									</div>
 									<label for="check-area08">Gulp/GRUNT</label>
@@ -140,21 +152,75 @@
 							<li>
 								<div class="check-row">
 									<div class="checkbox">
-										<input type="checkbox" id="check-area09">
+										<input type="checkbox" id="check-area09" checked>
 										<span></span>
 									</div>
-									<label for="check-area09">Ипользую Git</label>
+									<label for="check-area09">Иcпользую Git</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area10" checked>
+										<span></span>
+									</div>
+									<label for="check-area10">CSS3</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area11" checked>
+										<span></span>
+									</div>
+									<label for="check-area11">HTML5</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area12" checked>
+										<span></span>
+									</div>
+									<label for="check-area12">Jira</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area13" checked>
+										<span></span>
+									</div>
+									<label for="check-area13">Использую SVN</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area14" checked>
+										<span></span>
+									</div>
+									<label for="check-area14">Twitter Bootstrap</label>
+								</div>
+							</li>
+							<li>
+								<div class="check-row">
+									<div class="checkbox">
+										<input type="checkbox" id="check-area15" checked>
+										<span></span>
+									</div>
+									<label for="check-area15">ZURB Foundation</label>
 								</div>
 							</li>
 						</ul>
 					</div>
-					<div class="possession-js">
+					<div id="javascript" class="possession-js">
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico js">Уровень владения JavaScript</h2>
 						</div>
-						<div id="slider"></div>
+						<div id="slider" class="slider"></div>
 					</div>
-					<div class="about-block">
+					<div id="about-me" class="about-block">
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico about">Расскажите о себе</h2>
 							<p class="title-dscr">Напишите несколько предложений, чем привлекла наша вакансия<br> и что вы ожидаете от работы у нас.</p>

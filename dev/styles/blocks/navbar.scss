@@ -31,7 +31,7 @@
 	}
 }
 .slicknav_menu {
-    display:none;
+	display:none;
 }
 
 
@@ -49,5 +49,8 @@
 	}
 	.slicknav_menu {
 		display:block;
+	}
+	.sticky-wrapper{
+		height: auto !important;
 	}
 }

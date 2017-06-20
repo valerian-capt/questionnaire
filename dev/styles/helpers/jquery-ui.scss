@@ -208,7 +208,10 @@
 }
 .ui-menu .ui-menu-item-wrapper {
 	position: relative;
-	padding: 3px 1em 3px .4em;
+	padding: 5px 0 6px;
+	color: #435993;
+	font: 20px $RobotoL;
+
 }
 .ui-menu .ui-menu-divider {
 	margin: 5px 0;
@@ -216,10 +219,6 @@
 	font-size: 0;
 	line-height: 0;
 	border-width: 1px 0 0 0;
-}
-.ui-menu .ui-state-focus,
-.ui-menu .ui-state-active {
-	margin: -1px;
 }
 
 /* icon support */
@@ -678,12 +677,16 @@ button.ui-button::-moz-focus-inner {
 	background-image: none;
 }
 .ui-selectmenu-menu {
-	padding: 0;
+	padding: 35px 0 30px;
 	margin: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	display: none;
+	background: #fff;
+	-webkit-box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow:    0px 3px 11px 0px rgba(0, 0, 0, 0.5);
+	box-shadow:         0px 3px 11px 0px rgba(0, 0, 0, 0.5);
 }
 .ui-selectmenu-menu .ui-menu {
 	overflow: auto;
@@ -918,13 +921,6 @@ body .ui-tooltip {
 
 /* We use html here because we need a greater specificity to make sure disabled
 works properly when clicked or hovered */
-html .ui-button.ui-state-disabled:hover,
-html .ui-button.ui-state-disabled:active {
-	border: 1px solid #c5c5c5;
-	background: #f6f6f6;
-	font-weight: normal;
-	color: #454545;
-}
 .ui-state-default a,
 .ui-state-default a:link,
 .ui-state-default a:visited,
@@ -934,19 +930,6 @@ a:visited.ui-button,
 .ui-button {
 	color: #454545;
 	text-decoration: none;
-}
-.ui-state-hover,
-.ui-widget-content .ui-state-hover,
-.ui-widget-header .ui-state-hover,
-.ui-state-focus,
-.ui-widget-content .ui-state-focus,
-.ui-widget-header .ui-state-focus,
-.ui-button:hover,
-.ui-button:focus {
-	border: 1px solid #cccccc;
-	background: #ededed;
-	font-weight: normal;
-	color: #2b2b2b;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -964,17 +947,6 @@ a.ui-button:focus {
 
 .ui-visual-focus {
 	box-shadow: 0 0 3px 1px rgb(94, 158, 214);
-}
-.ui-state-active,
-.ui-widget-content .ui-state-active,
-.ui-widget-header .ui-state-active,
-a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background: #007fff;
-	font-weight: normal;
-	color: #ffffff;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
