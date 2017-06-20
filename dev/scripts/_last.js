@@ -44,7 +44,7 @@ var initObj = (function($){
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                $('#menu ul li a').removeClass("active");
+                $('#menu a').removeClass("active");
                 currLink.addClass("active");
             }
             else{
@@ -80,12 +80,13 @@ $(document).ready(function(){
             menu = target,
             navHeight = $('.nav').height();
         $target = $(target);
+        var top = $target.offset().top - navHeight - indent;
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-navHeight-indent
-        }, 500, 'swing', function () {
-            window.location.hash = target;
-            $(document).on("scroll", initObj.onScroll);
-        });
+            'scrollTop': top
+        }, 500);
+        window.location.hash = target;
+        $(document).on("scroll", initObj.onScroll);
+        return false;
     });
 
     initObj.init();

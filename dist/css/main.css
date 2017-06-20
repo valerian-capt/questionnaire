@@ -554,8 +554,10 @@ h1 {
   padding: 18px 20px;
 }
 
-.textarea:focus {
+.textarea:focus,
+.textarea .textarea-active {
   color: #1c1c1c;
+  border-color: #435993;
 }
 
 .textarea:focus + label,
