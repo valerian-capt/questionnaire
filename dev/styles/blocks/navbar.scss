@@ -1,3 +1,53 @@
+.navbar{
+	background: #fff;
+	z-index: 100 !important;
+}
 .nav{
 	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	&:after{
+		content:"";
+		position: absolute;
+		bottom: 0;
+		left: -99999px;
+		right: -99999px;
+		background: #d9d9d9;
+		height: 1px;
+	}
+	a{
+		padding: 0 36px;
+		text-decoration: none;
+		font: 14px $RobotoL;
+		color: #435993;
+		&:hover{
+			color: #1c1c1c;
+		}
+		&.active{
+			color: #1c1c1c;
+		}
+	}
+}
+.slicknav_menu {
+    display:none;
+}
+
+
+@media screen and (max-width: 768px) {
+	.nav{
+		height: auto;
+		display: block;
+		position: static;
+		&:after{
+			display: none;
+		}
+	}
+	#menu {
+		display:none;
+	}
+	.slicknav_menu {
+		display:block;
+	}
 }

@@ -53,6 +53,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.fi-ico-arrow {
+  &:before {
+    content: $fi-ico-arrow;
+  }
+}
 .fi-ico-done {
   &:before {
     content: $fi-ico-done;

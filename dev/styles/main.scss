@@ -2,12 +2,20 @@
 @import "common/index.scss";
 @import "components/checkbox.scss";
 @import "components/experience-list.scss";
-@import "components/index.scss";
 @import "components/input.scss";
+@import "components/select.scss";
+@import "components/textarea.scss";
 @import "components/title.scss";
+@import "blocks/about-block.scss";
 @import "blocks/block-form.scss";
-@import "blocks/index.scss";
+@import "blocks/core.scss";
+@import "blocks/experience-block.scss";
 @import "blocks/navbar.scss";
 @import "blocks/personal-info.scss";
+@import "blocks/possession-js.scss";
 @import "blocks/questionnaire-form.scss";
+@import "blocks/slicknav.scss";
+@import "blocks/theme.scss";
+@import "helpers/jquery-ui.scss";
+@import "helpers/jquery-ui.theme.scss";
 /* endinject */

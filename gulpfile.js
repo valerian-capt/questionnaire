@@ -42,6 +42,7 @@ gulp.task('styles:inject', function () {
       path.devStyles + '/components/*.scss',
       path.devStyles + '/blocks/*.scss',
       path.devStyles + '/layout/*.scss',
+      path.devStyles + '/helpers/*.scss',
       path.devStyles + '/themes/*.scss',
       path.devStyles + '/helpers.scss'
     ], {

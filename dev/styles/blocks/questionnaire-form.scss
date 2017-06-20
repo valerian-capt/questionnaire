@@ -1,5 +1,4 @@
 .questionnaire-form{
-	padding: 65px 0 0 0;
 	&-title{
 		text-align: center;
 	}
@@ -7,9 +6,25 @@
 		text-align: center;
 		margin-bottom: 24px;
 	}
-	input{
+	.input-gray{
 		width: 100%;
 		max-width: 520px;
 		text-align: center;
+	}
+	textarea{
+		max-width: 522px;
+		min-height: 180px;
+	}
+	.btn-submit{
+		width: 115px;
+		margin: 0 auto;
+		display: block;
+		background: #435993;
+		border: none;
+		outline:none;
+		color: #fff;
+		font: 16px/1.15 $RobotoL;
+		padding: 16px 5px;
+		border-radius: 10px;
 	}
 }

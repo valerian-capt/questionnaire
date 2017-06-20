@@ -1,16 +1,9 @@
 (function($){
 
     var init = function init() {
-        clickMenu();
         customSelect();
         customSlider();
         customSticky();
-    };
-
-    var clickMenu = function() {
-        $("#menuButton").click(function(){
-            $(".menu").toggleClass('active');
-        });
     };
 
     var customSelect = function() {
@@ -32,7 +25,8 @@
     var customSticky = function() {
         $("#menu").sticky({
             topSpacing:0
-        });
+        })        
+        .slicknav({label: ''});
     };
 
     init();

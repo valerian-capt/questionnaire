@@ -45,8 +45,15 @@
 		}
 	}
 	&.about{
+		padding-bottom: 13px;
 		&:before{
 			content: $fi-ico-about;
+			top: 10px;
+			font-size: 26px;
 		}
+	}
+	&-dscr{
+		font: 16px/1.6 $RobotoL;
+		margin-bottom: 37px;
 	}
 }

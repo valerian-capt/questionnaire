@@ -6,13 +6,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Title</title>
 	<link href="css/main.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body>
 	<div class="page">
 		<div class="page-wrap">
-			<div class="navbar">
+			<div class="navbar" id="menu">
 				<nav class="nav">
-					<a href="#">Личная информация</a>
+					<a href="#" class="active">Личная информация</a>
 					<a href="#">Опыт</a>
 					<a href="#">JavaScript</a>
 					<a href="#">О себе</a>
@@ -30,7 +31,23 @@
 								<input class="input-gray" type="text" placeholder="ФИО">
 							</div>
 							<div class="questionnaire-form-row">
-								<input class="input-gray" type="text" placeholder="ФИО">
+								<div class="select-gray">
+									<div id="customSelect">
+										<select name="speed" id="speed">
+											<option selected="selected">Год рождения</option>
+											<option>1990</option>
+											<option>1989</option>
+											<option>1988</option>
+											<option>1987</option>
+											<option>1986</option>
+											<option>1985</option>
+											<option>1984</option>
+											<option>1983</option>
+											<option>1982</option>
+											<option>1981</option>
+										</select>
+									</div>
+								</div>
 							</div>
 							<div class="questionnaire-form-row">
 								<input class="input-gray" type="text" placeholder="Место проживания">
@@ -137,10 +154,14 @@
 						</div>
 						<div id="slider"></div>
 					</div>
-					<div class="questionnaire-form-title">
-						<h2 class="title title_ico about">Расскажите о себе</h2>
+					<div class="about-block">
+						<div class="questionnaire-form-title">
+							<h2 class="title title_ico about">Расскажите о себе</h2>
+							<p class="title-dscr">Напишите несколько предложений, чем привлекла наша вакансия<br> и что вы ожидаете от работы у нас.</p>
+						</div>
+						<textarea class="textarea" placeholder="Понравилась тем, что..."></textarea>
 					</div>
-					<input type="submit">
+					<input type="submit" value="Готово" class="btn-submit">
 				</form>
 			</div>
 		</div>
