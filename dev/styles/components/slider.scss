@@ -41,6 +41,7 @@
 		height: 15px;
 		background: #e8e8e8;
 		border-radius: 0;
+		clip-path: url(#clipping);
 	}
 	&.ui-slider .ui-slider-handle{
 		margin-top: 23px;
@@ -50,6 +51,7 @@
 		width: 22px;
 		height: 25px;
 		margin-left: -11px;
+		cursor: pointer;
 		&:before{
 			content: $fi-ico-marker;
 			font: 25px $fi;

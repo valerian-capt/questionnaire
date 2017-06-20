@@ -435,6 +435,7 @@ var initObj = (function($){
         customSelect();
         customSlider();
         customSticky();
+        sliderBlocks();
     };
 
     var customSelect = function() {
@@ -469,6 +470,27 @@ var initObj = (function($){
         });
     };
 
+    var checkTextArea = function() {
+        var area = $('#liked-text');
+        var text = area.val();
+        if (text !== '') {
+            area.addClass('textarea-active');
+        } else {
+            area.removeClass('textarea-active');
+        }
+    };
+
+    var sliderBlocks = function() {
+        var spanArray = $(".slider-marker").children();
+        var firstH = $(".slider-wrap .slider-list li").slice(0,1).height();
+        var secondH = $(".slider-wrap .slider-list li").slice(1,2).height();
+
+        var sliderW = $(".slider-wrap").height();
+
+        spanArray[0].style.left = (firstH/sliderW)*100 + '%';
+        spanArray[1].style.left = ((firstH+secondH)/sliderW)*100+'%';
+    };
+
     var onScroll = function(event){
         var scrollPos = $(document).scrollTop();
         $('#menu a').each(function () {
@@ -477,25 +499,25 @@ var initObj = (function($){
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 $('#menu a').removeClass("active");
                 currLink.addClass("active");
-            }
-            else{
+            } else {
                 currLink.removeClass("active");
             }
         });
     }
 
-
     return {
         init: init,
         onScroll: onScroll,
-        checkInput: checkInput
+        checkInput: checkInput,
+        checkTextArea: checkTextArea
     }
 
 })(jQuery);
 
 $(document).ready(function(){
     $(document).on("scroll", initObj.onScroll);
-    $(document).on("change", initObj.checkInput);
+    $(".questionnaire-form").on("change", initObj.checkInput);
+    $('#liked-text').on("change", initObj.checkTextArea);
 
     $('a[href^="#"]').on('click', function (e) {
         e.preventDefault();
@@ -503,7 +525,7 @@ $(document).ready(function(){
         
         $('a').each(function () {
             $(this).removeClass('active');
-        })
+        });
         $(this).addClass('active');
       
         var target = this.hash,
@@ -514,9 +536,10 @@ $(document).ready(function(){
         var top = $target.offset().top - navHeight - indent;
         $('html, body').stop().animate({
             'scrollTop': top
-        }, 500);
+        }, 500, function () {
+            $(document).on("scroll", initObj.onScroll);
+        });
         window.location.hash = target;
-        $(document).on("scroll", initObj.onScroll);
         return false;
     });
 

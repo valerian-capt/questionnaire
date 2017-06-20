@@ -372,6 +372,7 @@ h1 {
   width: 100%;
   padding: 15px 0;
   left: 0;
+  top: 0;
   transition: all 0.17s linear 0s;
   cursor: text;
 }
@@ -516,6 +517,7 @@ h1 {
   height: 15px;
   background: #e8e8e8;
   border-radius: 0;
+  clip-path: url(#clipping);
 }
 
 .slider.ui-slider .ui-slider-handle {
@@ -526,6 +528,7 @@ h1 {
   width: 22px;
   height: 25px;
   margin-left: -11px;
+  cursor: pointer;
 }
 
 .slider.ui-slider .ui-slider-handle:before {
