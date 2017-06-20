@@ -4,7 +4,7 @@
 		text-align: left;
 		padding-left: 20px;
 		width: auto;
-		
+		white-space: nowrap;
 	}
 }
 
@@ -19,7 +19,7 @@
 		font: 24px/1 $RobotoR; 
 		color: #c8c8c8;
 		width: 100%;
-		padding: 15px 0;
+		padding: 17px 0;
 		left: 0;
 		top: 0;
 		transition: all 0.17s linear 0s;
@@ -27,7 +27,7 @@
 	}
 	.input-gray:focus, .input-active {
 		border-color: #435993;
-		padding: 22px 15px 8px;
+		padding: 22px 15px 12px;
 	}
 	.input-active {
 		border-color: #e5e5e5;
@@ -47,7 +47,7 @@
 	font: 22px/1.1 $RobotoR;
 	color: #c8c8c8;
 	border-radius: 5px;
-	padding: 15px;
+	padding: 17px;
 	transition: all 0.17s linear 0s;
 	&::-webkit-input-placeholder {
 		color: inherit;

@@ -429,6 +429,17 @@ this.length++)}return this};(function(d,c,h){for(var i=0;i<c.length;i++)h(d,c[i]
   });
 }));
 
+/*!
+ * jQuery UI Touch Punch 0.2.3
+ *
+ * Copyright 2011–2014, Dave Furfero
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ *
+ * Depends:
+ *  jquery.ui.widget.js
+ *  jquery.ui.mouse.js
+ */
+!function(a){function f(a,b){if(!(a.originalEvent.touches.length>1)){a.preventDefault();var c=a.originalEvent.changedTouches[0],d=document.createEvent("MouseEvents");d.initMouseEvent(b,!0,!0,window,1,c.screenX,c.screenY,c.clientX,c.clientY,!1,!1,!1,!1,0,null),a.target.dispatchEvent(d)}}if(a.support.touch="ontouchend"in document,a.support.touch){var e,b=a.ui.mouse.prototype,c=b._mouseInit,d=b._mouseDestroy;b._touchStart=function(a){var b=this;!e&&b._mouseCapture(a.originalEvent.changedTouches[0])&&(e=!0,b._touchMoved=!1,f(a,"mouseover"),f(a,"mousemove"),f(a,"mousedown"))},b._touchMove=function(a){e&&(this._touchMoved=!0,f(a,"mousemove"))},b._touchEnd=function(a){e&&(f(a,"mouseup"),f(a,"mouseout"),this._touchMoved||f(a,"click"),e=!1)},b._mouseInit=function(){var b=this;b.element.bind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),c.call(b)},b._mouseDestroy=function(){var b=this;b.element.unbind({touchstart:a.proxy(b,"_touchStart"),touchmove:a.proxy(b,"_touchMove"),touchend:a.proxy(b,"_touchEnd")}),d.call(b)}}}(jQuery);
 var initObj = (function($){
 
     var init = function init() {
@@ -444,13 +455,19 @@ var initObj = (function($){
             .selectmenu("menuWidget")
             .addClass( "overflow" )
             .niceScroll({
-                cursorcolor:"#00F", horizrailenabled: false
+                cursorcolor: "#d9d9d9",
+                cursorwidth: "5px",
+                cursorborder: "none",
+                railpadding: { top: 0, right: 5, left: 5, bottom: 0 },
+                cursorborderradius: "3px",
+                horizrailenabled: false
             });
     };
 
     var customSlider = function() {
         $( "#slider" ).slider({
-            range: "min"
+            range: "min",
+            value: 50
         });
     };
 
@@ -493,16 +510,21 @@ var initObj = (function($){
 
     var onScroll = function(event){
         var scrollPos = $(document).scrollTop();
-        $('#menu a').each(function () {
+        var firstLink = $('#menu a').first().position().top;
+        $('#menu a').each(function (index ) {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() >= scrollPos) {
                 $('#menu a').removeClass("active");
                 currLink.addClass("active");
             } else {
                 currLink.removeClass("active");
             }
         });
+
+        if (scrollPos <= firstLink) {
+            $('#menu a').first().addClass('active');
+        }
     }
 
     return {

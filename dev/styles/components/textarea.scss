@@ -7,12 +7,12 @@
 	color: #1c1c1c;
 	padding: 18px 20px;
 	&:focus,
-	.textarea-active {
+	&.textarea-active {
 		color: #1c1c1c;
 		border-color: #435993;
 	}
 	&:focus + label,
-	.textarea-active + label {
+	&.textarea-active + label {
 		font-size: 14px;
 		left: 50%;
 		transform: translateX(-50%);

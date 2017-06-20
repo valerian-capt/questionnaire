@@ -13,13 +13,19 @@ var initObj = (function($){
             .selectmenu("menuWidget")
             .addClass( "overflow" )
             .niceScroll({
-                cursorcolor:"#00F", horizrailenabled: false
+                cursorcolor: "#d9d9d9",
+                cursorwidth: "5px",
+                cursorborder: "none",
+                railpadding: { top: 0, right: 5, left: 5, bottom: 0 },
+                cursorborderradius: "3px",
+                horizrailenabled: false
             });
     };
 
     var customSlider = function() {
         $( "#slider" ).slider({
-            range: "min"
+            range: "min",
+            value: 50
         });
     };
 
@@ -62,16 +68,21 @@ var initObj = (function($){
 
     var onScroll = function(event){
         var scrollPos = $(document).scrollTop();
-        $('#menu a').each(function () {
+        var firstLink = $('#menu a').first().position().top;
+        $('#menu a').each(function (index ) {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() >= scrollPos) {
                 $('#menu a').removeClass("active");
                 currLink.addClass("active");
             } else {
                 currLink.removeClass("active");
             }
         });
+
+        if (scrollPos <= firstLink) {
+            $('#menu a').first().addClass('active');
+        }
     }
 
     return {
