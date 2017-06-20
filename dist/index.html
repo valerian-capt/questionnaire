@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Title</title>
 	<link href="css/main.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/app.css">
 </head>
 <body>
 	<div class="page">
@@ -29,7 +28,7 @@
 						<fieldset>
 							<div class="questionnaire-form-row">
 								<div class="input-holder">
-									<input id="full-name" class="input-gray" type="text" value="Черепанов" >
+									<input id="full-name" class="input-gray" type="text" value="Черепанов Валерий Валериевич" >
 									<label for="full-name">ФИО</label>
 								</div>
 							</div>
@@ -54,7 +53,7 @@
 							</div>
 							<div class="questionnaire-form-row">
 								<div class="input-holder">
-									<input id="residence" class="input-gray" type="text" value="Валерий">
+									<input id="residence" class="input-gray" type="text" value="Харьков">
 									<label for="residence">Место проживания</label>
 								</div>
 							</div>
@@ -218,14 +217,30 @@
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico js">Уровень владения JavaScript</h2>
 						</div>
-						<div id="slider" class="slider"></div>
+						<div class="slider-wrap">
+							<ul class="slider-list">
+								<li>Не владею</li>
+								<li>Использую готовые решения</li>
+								<li>Использую готовые решения <br>и умею и переделывать</li>
+								<li>Пишу сложный JS с нуля</li>
+							</ul>
+							<div class="slider-marker">
+								<span></span>
+								<span></span>
+							</div>
+							<div id="slider" class="slider">
+							</div>
+						</div>
 					</div>
 					<div id="about-me" class="about-block">
 						<div class="questionnaire-form-title">
 							<h2 class="title title_ico about">Расскажите о себе</h2>
 							<p class="title-dscr">Напишите несколько предложений, чем привлекла наша вакансия<br> и что вы ожидаете от работы у нас.</p>
 						</div>
-						<textarea class="textarea" placeholder="Понравилась тем, что..."></textarea>
+						<div class="input-holder textarea-holder">
+							<textarea id="liked-text" class="textarea"></textarea>
+							<label for="liked-text">Понравилась тем, что...</label>
+						</div>
 					</div>
 					<input type="submit" value="Готово" class="btn-submit">
 				</form>

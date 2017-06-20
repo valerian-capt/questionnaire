@@ -26,5 +26,9 @@
 		font: 16px/1.15 $RobotoL;
 		padding: 16px 5px;
 		border-radius: 10px;
+		&:hover {
+			border: 1px solid #e9efff;
+			padding: 15px 5px;
+		}
 	}
 }

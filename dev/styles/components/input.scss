@@ -1,8 +1,14 @@
+.input-holder.textarea-holder {
+	label {
+		font-size: 20px;
+		text-align: left;
+		padding-left: 20px;
+		width: auto;
+	}
+}
+
 .input-holder {
 	background: #fff;
-	
-	
-	/*padding: 15px 0;*/
 	max-width: 520px;
 	margin: 0 auto;
 	position: relative;
@@ -36,7 +42,7 @@
 	outline: none;
 	border: 1px solid #e8e8e8;
 	border-radius: 5px;
-	font: 22px/1 $RobotoR;
+	font: 22px/1.1 $RobotoR;
 	color: #c8c8c8;
 	border-radius: 5px;
 	padding: 15px;

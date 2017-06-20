@@ -4,6 +4,16 @@
 	border-radius: 5px;
 	width: 100%;
 	font: 20px/22px $RobotoR;
-	color: #c8c8c8;
+	color: #1c1c1c;
 	padding: 18px 20px;
+	&:focus {
+		color: #1c1c1c;
+	}
+	&:focus + label,
+	.textarea-active + label {
+		font-size: 14px;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 6px 0 0;
+	}
 }
