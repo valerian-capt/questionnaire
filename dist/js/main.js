@@ -446,7 +446,6 @@ var initObj = (function($){
         customSelect();
         customSlider();
         customSticky();
-        sliderBlocks();
     };
 
     var customSelect = function() {
@@ -495,17 +494,6 @@ var initObj = (function($){
         } else {
             area.removeClass('textarea-active');
         }
-    };
-
-    var sliderBlocks = function() {
-        var spanArray = $(".slider-marker").children();
-        var firstH = $(".slider-wrap .slider-list li").slice(0,1).height();
-        var secondH = $(".slider-wrap .slider-list li").slice(1,2).height();
-
-        var sliderW = $(".slider-wrap").height();
-
-        spanArray[0].style.left = (firstH/sliderW)*100 + '%';
-        spanArray[1].style.left = ((firstH+secondH)/sliderW)*100+'%';
     };
 
     var onScroll = function(event){

@@ -1,4 +1,7 @@
 .progress{
+	&-wrap{
+		position: relative;
+	}
 	&-list{
 		background: #fff;
 		font-size: 0;
@@ -81,6 +84,21 @@
 					padding-left: 8px;
 				}
 			}
+		}
+	}
+}
+.slider-marker{
+	span{
+		position: absolute;
+		height: 10px;
+		width: 1px;
+		background: #fff;
+		left: 50%;
+		bottom: 0;
+		z-index: 1;
+		&:first-child{
+			left: 24%;
+			height: 8px;
 		}
 	}
 }
