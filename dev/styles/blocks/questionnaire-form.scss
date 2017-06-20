@@ -1,0 +1,15 @@
+.questionnaire-form{
+	padding: 65px 0 0 0;
+	&-title{
+		text-align: center;
+	}
+	&-row{
+		text-align: center;
+		margin-bottom: 24px;
+	}
+	input{
+		width: 100%;
+		max-width: 520px;
+		text-align: center;
+	}
+}

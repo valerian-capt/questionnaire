@@ -1,0 +1,439 @@
+@charset "UTF-8";
+/* inject:scss */
+@font-face {
+  font-family: 'RobotoThin';
+  src: url("../fonts/RobotoThin.eot");
+  src: url("../fonts/RobotoThin.eot") format("embedded-opentype"), url("../fonts/RobotoThin.woff2") format("woff2"), url("../fonts/RobotoThin.woff") format("woff"), url("../fonts/RobotoThin.ttf") format("truetype"), url("../fonts/RobotoThin.svg#RobotoThin") format("svg");
+}
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url("../fonts/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular.eot") format("embedded-opentype"), url("../fonts/RobotoRegular.woff2") format("woff2"), url("../fonts/RobotoRegular.woff") format("woff"), url("../fonts/RobotoRegular.ttf") format("truetype"), url("../fonts/RobotoRegular.svg#RobotoRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'RobotoLight';
+  src: url("../fonts/RobotoLight.eot");
+  src: url("../fonts/RobotoLight.eot") format("embedded-opentype"), url("../fonts/RobotoLight.woff2") format("woff2"), url("../fonts/RobotoLight.woff") format("woff"), url("../fonts/RobotoLight.ttf") format("truetype"), url("../fonts/RobotoLight.svg#RobotoLight") format("svg");
+}
+
+@font-face {
+  font-family: 'font-ico';
+  src: url("../fonts/font-ico.ttf?khh8zn") format("truetype"), url("../fonts/font-ico.woff?khh8zn") format("woff"), url("../fonts/font-ico.svg?khh8zn#font-ico") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="fi-"], [class*=" fi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'font-ico' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-ico-done:before {
+  content: "";
+}
+
+.fi-ico-about:before {
+  content: "";
+}
+
+.fi-ico-experience:before {
+  content: "";
+}
+
+.fi-ico-info:before {
+  content: "";
+}
+
+.fi-ico-js:before {
+  content: "";
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  max-height: 100000px;
+  outline: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  color: inherit;
+  border-radius: 0;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  overflow: visible;
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+textarea {
+  overflow: auto;
+  resize: none;
+}
+
+::-webkit-input-placeholder {
+  color: inherit;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: inherit;
+}
+
+:-ms-input-placeholder {
+  color: inherit;
+}
+
+.page {
+  background: #fff;
+}
+
+.page-wrap {
+  max-width: 798px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+body {
+  min-width: 320px;
+  font: 12px/1.2 arial, helvetica, sans-serif;
+  color: #2e211c;
+}
+
+button,
+[type=reset],
+[type=submit],
+[type=image],
+a {
+  -webkit-transition: background-color .2s, color .2s;
+  transition: background-color .2s, color .2s;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+h1 {
+  font: 70px/1 "RobotoThin", Arial, sans-serif;
+}
+
+.check-row {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.check-row label {
+  overflow: hidden;
+  display: block;
+  vertical-align: top;
+  font: 16px "RobotoLight", Arial, sans-serif;
+}
+
+.check-row label:hover {
+  cursor: pointer;
+}
+
+.checkbox {
+  position: relative;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+}
+
+.checkbox:hover span:after {
+  background: #e9efff;
+}
+
+.checkbox span:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  display: block;
+  border: 1px solid #435993;
+  border-radius: 2px;
+}
+
+.checkbox input {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+  border: none !important;
+  background: none;
+}
+
+.checkbox input:checked ~ span:before {
+  content: "";
+  font: 9px "font-ico";
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.checkbox input:checked ~ span:after {
+  background: #435993;
+}
+
+.experience-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2px 0 120px;
+}
+
+.experience-list li {
+  width: 27.2%;
+  margin-bottom: 15px;
+}
+
+.input-gray {
+  background: #fff;
+  outline: none;
+  border: 1px solid #e8e8e8;
+  font: 24px/1 "RobotoRegular", Arial, sans-serif;
+  color: #c8c8c8;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.input-gray::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.input-gray::-moz-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.input-gray:-ms-input-placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.title {
+  font: 30px "RobotoLight", Arial, sans-serif;
+}
+
+.title_ico {
+  padding: 68px 0 47px;
+  position: relative;
+}
+
+.title_ico:before {
+  content: '';
+  font: 30px "font-ico";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #9e9e9e;
+}
+
+.title_ico:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 47px;
+  height: 47px;
+  border: 1px solid #9e9e9e;
+  border-radius: 50%;
+}
+
+.title.info:before {
+  content: "";
+  top: 8px;
+}
+
+.title.experience:before {
+  content: "";
+  top: 11px;
+  font-size: 26px;
+}
+
+.title.js:before {
+  content: "";
+  top: 14px;
+  font-size: 16px;
+}
+
+.title.about:before {
+  content: "";
+}
+
+.block-form {
+  padding: 121px 0 75px;
+}
+
+.block-form__title {
+  text-align: center;
+}
+
+.nav {
+  height: 80px;
+}
+
+.personal-info {
+  padding-bottom: 48px;
+}
+
+.questionnaire-form {
+  padding: 65px 0 0 0;
+}
+
+.questionnaire-form-title {
+  text-align: center;
+}
+
+.questionnaire-form-row {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.questionnaire-form input {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+}
+
+/* endinject */
+
+/*# sourceMappingURL=maps/main.css.map */

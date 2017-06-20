@@ -1,0 +1,11 @@
+.experience-list{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 2px 0 120px;
+	li{
+		width: 27.2%;
+		margin-bottom: 15px;
+	}
+}
+

@@ -1,0 +1,52 @@
+.title{
+	font: 30px $RobotoL;
+	&_ico{
+		padding: 68px 0 47px;
+		position: relative;
+		&:before{
+			content: '';
+			font: 30px $fi;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #9e9e9e;
+		}
+		&:after{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 47px;
+			height: 47px;
+			border: 1px solid #9e9e9e;
+			border-radius: 50%;
+		}
+	}
+	&.info{
+		&:before{
+			content: $fi-ico-info;
+			top: 8px;
+		}
+	}
+	&.experience{
+		&:before{
+			content: $fi-ico-experience;
+			top: 11px;
+			font-size: 26px;
+		}
+	}
+	&.js{
+		&:before{
+			content: $fi-ico-js;
+			top: 14px;
+			font-size: 16px;
+		}
+	}
+	&.about{
+		&:before{
+			content: $fi-ico-about;
+		}
+	}
+}
